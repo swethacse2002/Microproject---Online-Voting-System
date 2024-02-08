@@ -1,0 +1,16 @@
+/* .card-body{
+ padding-left: 50px;;
+} */
+
+.card{
+    margin-left: 35%;
+    margin-top:3%;
+    box-shadow: 5px 5px gray;
+    
+ }
+ .card-body{
+    margin-left: 10%;
+	padding-bottom: 0%;
+   
+
+ }

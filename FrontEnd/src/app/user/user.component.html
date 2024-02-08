@@ -1,0 +1,177 @@
+<ul class="nav justify-content-center">
+  <marquee width="100%" behavior="scroll" bgcolor="Indigo">
+    <p style="padding:20px;color:white"> Vote Now ... Election is live !!!</p>
+  </marquee>
+</ul>
+<br>
+<div class="row">
+  <div class="col-3">
+
+
+    <div class="card" style="width: 18rem; " id="details">
+      <div class="card-body" style="background-color:ivory">
+        <p>
+          <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+            Parliment election
+          </button>
+        </p>
+        <div style="min-height: 120px;">
+          <div class="collapse collapse-horizontal" id="collapseWidthExample">
+            <div class="card card-body" style="width: 200px;">
+              Date : 24/02/08
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem; " id="details">
+      <div class="card-body" style="background-color:ivory">
+        <p>
+          <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseWidthExample1" aria-expanded="false" aria-controls="collapseWidthExample1">
+            Lok sabha election
+          </button>
+        </p>
+        <div style="min-height: 120px;">
+          <div class="collapse collapse-horizontal" id="collapseWidthExample1">
+            <div class="card card-body" style="width: 200px;">
+              Date : 24/03/08
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+  <div class="col-9">
+
+    <div class="row">
+      <div class="col-4">
+        <app-polling></app-polling>
+
+        <div class="card" style="width: 22rem; margin-top:20px;">
+          <div class="card-body">
+           
+            <h1 style="color:navy"><b>Parliment Election</b></h1><br>
+
+
+
+
+
+            <form [formGroup]="myForm" id="myForm" name="myForm">
+              <p><b>Enter Voter Id </b> &nbsp;
+                <!-- <select class="select form-control-sm" formControlName="voterId">
+                  <option *ngFor="let use of regList" >{{use.voterId}}</option>
+                </select> -->
+                <input type="text" class="form-control form-control-sm" formControlName="voterId">
+              </p>
+              <h3 style="color:navy">Choose party you want to vote</h3>
+
+
+
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                  formControlName="partyName" value="BJP" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                  BJP
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                  formControlName="partyName" value="INC">
+                <label class="form-check-label" for="exampleRadios2">
+                  INC
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                  formControlName="partyName" value="JD">
+                <label class="form-check-label" for="exampleRadios3">
+                  JD
+                </label>
+              </div>
+              <br>
+<br>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Vote
+              </button>
+
+            </form>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-8">
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrops">
+      View Result
+    </button>
+
+
+      
+    <!-- <app-viewelection></app-viewelection> -->
+  </div>
+
+</div>
+
+<!-- view result model -->
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrops" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Parliment Election</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2 style="color:rgb(23, 192, 7)"><b>Result</b></h2><br>
+        <h1><b>BJP</b></h1>
+        <h2><b>12 votes</b></h2>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" name="ok"
+          >OK</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Happy voting</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p style="color:green; font-size:20px;">Voted Successfully !!! </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" name="ok"
+          (click)="insertPolling(myForm.value)">OK</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+

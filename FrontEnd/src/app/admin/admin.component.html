@@ -1,0 +1,71 @@
+<header>
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>Online Voting System</span>
+    <span class="example-spacer"></span>
+    <button mat-raised-button>Feature</button> &nbsp;
+    <button mat-raised-button>About us</button> &nbsp;
+    
+</mat-toolbar>
+</header>
+
+
+
+
+<div class="row">
+    <div class="col-2">
+
+        <ul class="nav flex-column">
+
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li> 
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Party</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" routerLink="/party">Add party</a></li>
+                  <li><a   class="dropdown-item" routerLink="/viewparty">View all party</a></li>
+                  <!-- <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li> -->
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Election</a>
+                <ul class="dropdown-menu">
+                  <li><a style="background-color: bisque;" class="dropdown-item" routerLink="/election">Add election</a></li>
+                  <li><a style="background-color: bisque;" class="dropdown-item" routerLink="/viewelection">View all election</a></li>
+                  <!-- <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li> -->
+                </ul>
+              </li>
+
+              
+
+           
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/polling">Result</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Votes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">User details</a>
+            </li>
+        
+           
+          </ul>
+
+
+    </div>
+    <div class="col-10">
+        <router-outlet></router-outlet>
+    </div>
+
+</div>
+
+

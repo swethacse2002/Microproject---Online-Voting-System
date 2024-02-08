@@ -1,0 +1,9 @@
+.example-spacer {
+    flex: 3 1 auto;
+  }
+ .nav-item{
+    font-size: 20px;
+ }
+ li{
+   padding: 16px;
+ }

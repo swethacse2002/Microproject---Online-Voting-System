@@ -1,0 +1,32 @@
+<p>view-party works!</p>
+
+<div class="card">
+    <div class="card-body">
+      <br>
+      <mat-toolbar color="green">
+        
+        <span>All Party details</span>
+        <!-- <span class="example-spacer"></span> -->
+        
+      </mat-toolbar>
+      <!-- <h4 style="text-align:center">All laptop details</h4> -->
+      <br>
+      <table class="table">
+        <tr>
+          <th>Party Id</th>
+          <th> Party Name</th>
+          <th>Party Symbol</th>
+          
+        </tr>
+
+        <tr *ngFor="let par of partyList">
+          <td>{{par.partyId}}</td>
+          <td>{{par.partyName}}</td>
+          <td>{{par.partySymbol}}</td>
+         
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  

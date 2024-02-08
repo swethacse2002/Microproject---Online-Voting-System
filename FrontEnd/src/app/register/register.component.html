@@ -1,0 +1,209 @@
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+        <!-- <img src="https://as1.ftcdn.net/v2/jpg/01/21/32/98/500_F_121329889_kwaDTP3cGxL9gto2JhJ4xMT6v9HVTsa4.jpg"> -->
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-9 col-xl-7">
+                <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                    <div class="card-body p-4 p-md-5">
+                        <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
+
+                        <form [formGroup]="myForm" id="myForm" name="myForm">
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+
+                                    <div class="form-outline">
+                                        <label class="form-label" for="userName">User Name</label>
+                                        <input type="text" formControlName="userName" name="userName" id="userName"
+                                            class="form-control form-control-lg" />
+                                    </div>
+
+                                    <!-- <div *ngIf="myForm.get('userName')!.touched && myForm.get('userName')!.invalid">
+                                        <div *ngIf="myForm.get('userName')!.hasError('required')">
+                                            <font color="red">*Username is required</font>
+                                        </div>
+                                        <div *ngIf="myForm.get('userName')!.hasError('pattern')">
+                                            <font color="red">*Username is Invalid</font>
+                                        </div>
+                                    </div> -->
+
+
+                                </div>
+                                <div class="col-md-6 mb-4">
+
+                                    <div class="form-outline">
+                                        <label class="form-label" for="voterId">Voter Id</label>
+                                        <input type="text" formControlName="voterId" name="voterId" id="voterId"
+                                            class="form-control form-control-lg" />
+                                    </div>
+
+                                    <!-- <div *ngIf="myForm.get('voterId')!.touched && myForm.get('voterId')!.invalid">
+                                        <div *ngIf="myForm.get('voterId')!.hasError('required')">
+                                            <font color="red">*Voter Id is required</font>
+                                        </div>
+                                        <div *ngIf="myForm.get('voterId')!.hasError('pattern')">
+                                            <font color="red">*Voter Id is Invalid</font>
+                                        </div>
+                                    </div> -->
+
+                                    
+
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+
+                                    <div class="form-outline">
+                                        <label class="form-label" for="emailId">Email Id</label>
+                                        <input type="text" formControlName="emailId" name="emailId" id="emailId"
+                                            class="form-control form-control-lg" />
+
+                                    </div>
+
+                                    <!-- <div *ngIf="myForm.get('emailId')!.touched && myForm.get('emailId')!.invalid">
+                                        <div *ngIf="myForm.get('emailId')!.hasError('required')">
+                                            <font color="red">*Email Id is required</font>
+                                        </div>
+                                        <div *ngIf="myForm.get('emailId')!.hasError('pattern')">
+                                            <font color="red">*Email Id is Invalid</font>
+                                        </div>
+                                    </div> -->
+
+
+                                </div>
+                                <div class="col-md-6 mb-4">
+
+                                    <div class="form-outline">
+                                        <label class="form-label" for="password">Password</label>
+                                        <input type="text" formControlName="password" name="password" id="password"
+                                            class="form-control form-control-lg" />
+
+                                    </div>
+
+                                    <!-- <div *ngIf="myForm.get('password')!.touched && myForm.get('password')!.invalid">
+                                        <div *ngIf="myForm.get('password')!.hasError('required')">
+                                            <font color="red">*Password is required</font>
+                                        </div>
+                                        <div *ngIf="myForm.get('password')!.hasError('pattern')">
+                                            <font color="red">*Password is Invalid</font>
+                                        </div>
+                                    </div> -->
+
+
+
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+
+                                    <div class="form-outline">
+                                        <label class="form-label" for="age">Age</label>
+                                        <input type="int" formControlName="age" name="age" id="age"
+                                            class="form-control form-control-lg" />
+                                    </div>
+
+                                    <!-- <div *ngIf="myForm.get('age')!.touched && myForm.get('age')!.invalid">
+                                        <div *ngIf="myForm.get('age')!.hasError('required')">
+                                            <font color="red">*Age is required</font>
+                                        </div>
+                                        <div *ngIf="myForm.get('age')!.hasError('pattern')">
+                                            <font color="red">*Age is Invalid</font>
+                                        </div>
+                                    </div> -->
+
+
+
+
+                                </div>
+                                <div class="col-md-6 mb-4">
+
+                                    <div class="form-outline">
+                                        <label class="form-label" for="mobile">Mobile</label>
+                                        <input type="text" formControlName="mobile" name="mobile" id="mobile"
+                                            class="form-control form-control-lg" />
+
+                                    </div>
+
+                                    <!-- <div *ngIf="myForm.get('mobile')!.touched && myForm.get('mobile')!.invalid">
+                                        <div *ngIf="myForm.get('mobile')!.hasError('required')">
+                                            <font color="red">*Mobile is required</font>
+                                        </div>
+                                        <div *ngIf="myForm.get('mobile')!.hasError('pattern')">
+                                            <font color="red">*Mobile is Invalid</font>
+                                        </div>
+                                    </div>
+ -->
+
+
+                                </div>
+                            </div>
+
+                            <!-- <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                                <label class="form-label" for="userId">User Id</label>
+                                <input type="text" formControlName="userId" name="userId" id="userId" class="form-control form-control-lg" />
+
+                            </div>
+                        </div> -->
+
+
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <label class="form-label" for="userId">User Id</label>
+                                        <input type="text" formControlName="userId" name="userId" id="userId"
+                                            class="form-control form-control-lg" />
+
+                                    </div>
+                                </div>
+
+
+
+                                <!-- <div *ngIf="myForm.get('userId')!.touched && myForm.get('userId')!.invalid">
+                                    <div *ngIf="myForm.get('userId')!.hasError('required')">
+                                        <font color="red">*User Id is required</font>
+                                    </div>
+                                    <div *ngIf="myForm.get('userId')!.hasError('pattern')">
+                                        <font color="red">*User Id is Invalid</font>
+                                    </div>
+                                </div> -->
+
+
+
+                                <div class="col-md-6 mb-4">
+                                    <label class="form-label select-label">Choose option</label> &nbsp;&nbsp;
+                                    <select class="select form-control-sm" formControlName="userType">
+                                        <option value="1" disabled>Choose user Type</option>
+                                        <option value="User">User</option>
+                                        <option value="Admin">Admin</option>
+                                        >
+                                    </select>
+                                </div>
+
+                            </div>
+
+
+                        
+                        <div class="mt-4 pt-2">
+                            <button  mat-raised-button color="primary"><a style="color:white; text-decoration:none;"routerLink="/login">Back</a></button> &nbsp; &nbsp;
+                            <button mat-raised-button color="primary" name="Register"
+                                (click)="insertRegister(myForm.value)">Register</button>&nbsp;
+                            {{result}}
+                        </div>
+                    </form>
+
+                        
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

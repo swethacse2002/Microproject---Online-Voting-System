@@ -1,0 +1,96 @@
+
+
+<!-- 53-112 -->
+
+<!-- <div class="row">
+      <div class="col-4">
+
+        <div class="card" style="width: 22rem; margin-top:20px;">
+          <div class="card-body">
+            <h1 style="color:navy"><b>Parliment Election</b></h1><br>
+
+
+            
+
+    
+            <form [formGroup]="myForm" id="myForm" name="myForm">
+              <p><b>Select Voter Id </b> &nbsp;
+                <select class="select form-control-sm" formControlName="voterId">
+                  <option *ngFor="let use of regList">{{use.voterId}}</option>
+                </select>
+              </p>
+              <h3 style="color:navy">Choose party you want to vote</h3>
+
+
+
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" formControlName="partyName" value="BJP"
+                  checked>
+                <label class="form-check-label" for="exampleRadios1">
+                  BJP
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="INC">
+                <label class="form-check-label" for="exampleRadios2">
+                  INC
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="JD">
+                <label class="form-check-label" for="exampleRadios3">
+                  JD
+                </label>
+              </div>
+              <br>
+
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Vote
+              </button>
+
+            </form>
+
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-5">
+        col2
+      </div>
+    </div>  -->
+
+
+
+    <p>viewVote works!</p>
+
+<div class="card">
+    <div class="card-body">
+     
+      <!-- <h4 style="text-align:center">All laptop details</h4> -->
+      <br>
+      <table class="table">
+        <tr>
+          <th>Voter Id</th>
+          <th>Party Name</th>
+          
+        </tr>
+
+        <tr *ngFor="let pol of pollList">
+          <td>{{pol.voterId}}</td>
+          <td>{{pol.partyName}}</td>
+          
+          <!-- <td><button type="button" class="btn btn-success" ><a routerLink="/editelection" style="text-decoration: none;color:black;">Edit</a></button></td>
+          <td><button type="button" class="btn btn-secondary" style="text-decoration: none;color:black;">Delete</button></td> -->
+
+          
+         
+        </tr>
+
+        
+      </table>
+    </div>
+  </div>
+

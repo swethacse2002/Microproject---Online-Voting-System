@@ -1,0 +1,22 @@
+<p>delete-election works!</p>
+
+<div class="card w-50">
+    <div class="card-body">
+        <h1>Delete Election</h1>
+
+
+        <form [formGroup]="myForm" id="myForm" name="myForm">
+
+
+            <h3>Election Id</h3>
+            <input type="text" style="width: 20rem" formControlName="electionId" class="form-control">
+            <br>
+        
+        </form>
+
+        <button mat-raised-button color="primary" name="Elections" (click)="deleteElections(myForm.value)">Delete
+            Election</button>&nbsp;<br>
+        <p style="font-color: green"><b>{{result}}</b></p>
+
+    </div>
+</div>

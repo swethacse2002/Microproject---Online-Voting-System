@@ -1,0 +1,68 @@
+<p>election works!</p>
+
+
+
+
+<body style="background-color: rgb(223, 186, 250);">
+<br>
+<div class="card" style="width: 30rem;height : 35rem; " >
+    <div class="card-body" >
+        <h1>Add Election</h1>
+
+
+        <form [formGroup]="myForm" id="myForm" name="myForm">
+
+
+            <h3>Election Id</h3>
+            <input type="text" style="width: 20rem" formControlName="electionId" class="form-control">
+            <br>
+            <h3>Election Name</h3>
+            <input type="text" style="width: 20rem" formControlName="electionName" class="form-control">
+            <br>
+            <h3>Party Name</h3>
+
+
+           
+            <select class="select form-control-sm" formControlName="partyName" >
+                <option value="1" disabled>Choose Party</option>
+                <option value="INC">INC</option>
+                <option value="BJP">BJP</option>
+                <option value="JD">JD</option>
+
+                >
+            </select>
+
+            <br><br>
+            <h3>Date of Election</h3>
+            <input type="date" style="width: 20rem" formControlName="date" class="form-control">
+            <br>
+            <br>
+
+            <!-- <a href="#" class="btn btn-primary">Add Party</a> -->
+        </form>
+
+        <button mat-raised-button color="primary" name="Elections" (click)="insertElections(myForm.value)" data-bs-toggle="modal" data-bs-target="#exampleModal">Add
+            Election</button>&nbsp;<br>
+        <p style="font-color: green"><b>{{result}}</b></p>
+
+    </div>
+</div>
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+       
+        <div class="modal-body">
+          <p style="color:green;">Election Added Successfully !</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
